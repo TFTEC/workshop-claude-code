@@ -1,0 +1,37 @@
+{
+  "v": 4,
+  "createdOnFiles": { "v": 1, "at": "2026-10-08T18:00:00Z" },
+  "lists": "css",
+  "title": "Claude Code na prática",
+  "order": [
+    "capa",
+    "o-dia",
+    "combinados",
+    "superficies",
+    "o-que-gasta",
+    "botoes",
+    "pergunta",
+    "eixo",
+    "maturidade",
+    "peso",
+    "aiox-x-enxuto",
+    "formato-enxuto",
+    "regra",
+    "automacao",
+    "produto",
+    "obrigado"
+  ],
+  "sections": {
+    "s1": { "description": "Abertura: o objetivo do dia, a pauta e os combinados.", "start": "capa" },
+    "s2": { "description": "Superfícies: onde o Claude Code roda.", "start": "superficies" },
+    "s3": { "description": "Modelo, effort e tokens: o que gasta e como medir.", "start": "o-que-gasta" },
+    "s4": { "description": "O eixo peças soltas → receita pronta e as opções do mercado.", "start": "pergunta" },
+    "s5": { "description": "AIOX × formato enxuto e a regra para escolher.", "start": "aiox-x-enxuto" },
+    "s6": { "description": "Encerramento: automação, o produto e os links.", "start": "automacao" }
+  },
+  "faces": {
+    "ibm-plex-sans": { "family": "IBM Plex Sans", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" },
+    "jetbrains-mono": { "family": "JetBrains Mono", "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" }
+  },
+  "designSystems": []
+}

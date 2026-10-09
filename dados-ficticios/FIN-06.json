@@ -1,0 +1,25 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "name": "log-ficticio-central",
+      "resourceGroup": "rg-ficticio-monitoracao",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "plano": "PerGB2018",
+      "retencaoDias": 180,
+      "limiteDiario": "10 GB"
+    },
+    {
+      "name": "log-ficticio-laboratorio",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "plano": "PerGB2018",
+      "retencaoDias": 30,
+      "limiteDiario": "sem limite"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

@@ -1,0 +1,29 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "name": "ip-ficticio-site-desativado",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "sku": "Standard",
+      "alocacao": "Static",
+      "ip": "203.0.113.10",
+      "camada": "Regional",
+      "versao": "IPv4"
+    },
+    {
+      "name": "ip-ficticio-sobra-do-teste",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "sku": "Standard",
+      "alocacao": "Static",
+      "ip": "203.0.113.25",
+      "camada": "Regional",
+      "versao": "IPv4"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

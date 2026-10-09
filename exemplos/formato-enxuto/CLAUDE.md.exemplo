@@ -1,0 +1,88 @@
+# Sistema interno da TFTEC
+
+Sistema interno de operação da TFTEC. Consolida alunos, vendas, cobranças e comunicação de várias plataformas em um `Customer` único e opera por chat com IA. Escrita no banco só por script de ops do repositório, com ensaio antes.
+
+Vocabulário do domínio: `CONTEXT.md`. Use os termos canônicos de lá em código, testes, issues e specs.
+
+## Origem
+
+Este repositório nasceu em 2026-09-02 só com o código do repositório anterior, sem o framework de agentes antigo e sem as docs do processo anterior. Histórico de commits, ADRs antigos e stories continuam no repositório de origem.
+
+## Mapa
+
+| Pasta | O que é | Rodar | Testar |
+|---|---|---|---|
+| `src/` | Frontend React + Vite + TypeScript + Tailwind + shadcn/ui + TanStack Query | `npm run dev` | `npm test` (Vitest) |
+| `backend/` | API .NET: controllers, jobs em background, hubs SignalR, chat com IA, worker de eventos | `dotnet run` na pasta da API | `dotnet test` (xUnit) |
+| `sites/` | Sites de captação, cada um com build e hospedagem próprios | `npm run dev` em cada Site | `npm test` em cada Site |
+| `scripts/agentes/` | Guarda da documentação dos agentes e scripts da operação | | `node --test scripts/agentes/*.test.mjs` |
+
+Lint do frontend: `npm run lint`. Não existe `npm run typecheck`.
+
+## Regras que o código não confessa
+
+- **PII**: todo endpoint que devolve Customer passa por `PiiMasker`; admin não é mascarado. Nunca gravar valor mascarado: o frontend limpa e-mail, telefone e documento antes do PATCH e o backend responde 422.
+- **Nunca `HasQueryFilter`** no EF Core. Soft delete (`DeletedAt`) e dado de teste filtram no repositório ou na view SQL. O filtro global foi o desastre do V1.
+- **Nunca `catch {}` vazio**: mínimo `LogWarning`.
+- **Schema muda por slot SQL novo**, numerado e idempotente, aplicado pelo deploy. `dotnet ef migrations` não é usado.
+- **Deploy não é prova de funcionamento**: depois de publicar, prove no ar. O processo de SQL de ops e de deploy tem documento próprio no índice de processos.
+- **Métrica de negócio tem uma definição só**: cada métrica vem de uma view SQL canônica. Sem somas inline.
+- **Zero mentiroso**: valor que pode ser desconhecido é `number | null`. Desconhecido é nulo e a tela mostra "indisponível", nunca `0` ou `R$ 0,00`.
+- **410 Gone é estado de primeira classe**: rotas V1 desligadas respondem 410 com motivo técnico; a UI traduz o motivo e nunca o mostra cru. Suítes de regressão garantem os 410.
+- **`Payment` é imutável**; mudança de status de cobrança vive em `Installment`.
+- **Segredos** vivem no Key Vault do projeto (`<NOME-DO-KEY-VAULT>`). Referencie por nome; nunca ecoe valor.
+- **Sites**: export do Lovable nunca substitui um site às cegas (perde honeypot, `generate_lead`, máscara de telefone, fontes locais).
+- **SharePoint é arquivo**: arquivo do SharePoint fica onde está; o agente lê e usa, sem apagar nem mover (dono, 06/10/2026).
+
+## Estado que engana
+
+- O README do backend está desatualizado: chama conectores de placeholder e lista endpoints apagados. Confie no código.
+- O registro de status dos jobs anuncia jobs que não existem, e vários jobs são no-op por flag.
+- `tsconfig.app.json` é frouxo (`strict: false`); a tipagem é mais fraca do que parece.
+- `Integration.Name` e `Integration.Platform` coexistem para a mesma coisa.
+
+## Convenções
+
+- Conventional commits em português: `feat:`, `fix:`, `docs:`, `chore:`. Cite a issue quando houver: `feat: … (#42)`.
+
+## Sessões em paralelo
+
+Várias sessões trabalham ao mesmo tempo, e a issue do GitHub é a unidade de trabalho entre elas. Passo a passo, com o critério de pronto de cada passo: `docs/agents/coordenacao-de-sessoes.md`.
+
+- A sessão que vai mudar algo assume a issue antes de começar: label `em-andamento`, responsável e comentário com o nome da sessão. Pedido sem issue ganha uma na hora. Sessão só de leitura dispensa issue e worktree.
+- Todo trabalho que muda arquivo começa numa worktree nova, na branch `<N>-<slug>` em dia com a `main` do GitHub (depois de `git fetch origin`).
+- A sessão só termina registrando o que aprendeu e deixando na issue o PR ou o "onde parei". Lição nova vai para o repositório (documento por PR, ou comentário na issue do documento pendente), não só para a memória.
+
+## Agent skills
+
+### Escolha da skill
+
+No começo de cada pedido, antes de agir, o agente escolhe a skill que cobre a tarefa; o dono não precisa saber qual. O mapa completo dos fluxos é a `ask-matt` (plugin `mattpocock-skills`).
+
+| Situação | Skill |
+|---|---|
+| Ideia a afiar antes de construir | `grill-with-docs`; se passar de uma sessão, `to-spec` e `to-tickets` |
+| Issue ou spec pronta para construir | `implement` (roda `tdd` e fecha com `code-review`) |
+| Bug que resiste à primeira olhada | `diagnosing-bugs` |
+| Issue que chegou crua | `triage` |
+| Esforço grande e nebuloso, maior que uma sessão | `wayfinder` |
+| Passo que só o dono pode dar (credencial, painel, migração) | `wizard` |
+| Revisar uma branch ou um PR | `code-review` |
+
+Skill da lista do agente: invocar pelo Skill tool e seguir as etapas dela. Os fluxos do `mattpocock-skills` (`ask-matt`, `to-spec`, `to-tickets`, `implement`, `triage`, `wayfinder`, `handoff` e os demais) vêm do fork em `claude-plugins/`, sem a trava `disable-model-invocation`, e entram só quando o dono pede o fluxo ou o `ask-matt` o indica: [skills-do-matt-pocock.md](docs/agents/skills-do-matt-pocock.md). Skill que o Skill tool recusa é reservada ao dono, e o hook `skill-router.mjs` lista as de hoje a cada pedido; a lista do hook é a fonte. Quando uma delas cobrir o pedido, o agente responde em uma linha com o comando pronto para o dono digitar, por exemplo `/mattpocock-skills:implement #64` numa máquina sem o fork; o comando só roda quando é a primeira coisa da mensagem.
+
+### Issue tracker
+
+Issues vivem no GitHub Issues deste repositório, via `gh`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Os cinco labels canônicos com os nomes padrão. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `CONTEXT.md` na raiz e ADRs em `docs/adr/`. See `docs/agents/domain.md`.
+
+### Processos da operação
+
+O "como fazer" de cada processo (painéis web, anúncios, automação e CRM, SQL de ops, deploy, tracking do lead, coordenação de sessões) mora no repositório, não na memória da máquina. Antes de agir num processo, leia o documento dele pelo índice: `docs/agents/README.md`.

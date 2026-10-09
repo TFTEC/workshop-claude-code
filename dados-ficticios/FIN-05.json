@@ -1,0 +1,27 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "name": "snapshot-ficticio-antes-da-atualizacao",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "tamanhoGB": 128,
+      "incremental": false,
+      "criadoEm": "2026-03-15T10:00:00Z",
+      "idadeDias": 207
+    },
+    {
+      "name": "snapshot-ficticio-backup-manual",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "tamanhoGB": 64,
+      "incremental": true,
+      "criadoEm": "2026-07-01T08:30:00Z",
+      "idadeDias": 99
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

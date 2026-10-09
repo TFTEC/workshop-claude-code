@@ -1,0 +1,27 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "name": "vm-ficticia-relatorios-mensais",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "tamanhoVm": "Standard_D4s_v5",
+      "estado": "PowerState/deallocated",
+      "discos": 2,
+      "discosGB": 160
+    },
+    {
+      "name": "vm-ficticia-teste-de-carga",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "tamanhoVm": "Standard_B2s",
+      "estado": "PowerState/stopped",
+      "discos": 1,
+      "discosGB": 128
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

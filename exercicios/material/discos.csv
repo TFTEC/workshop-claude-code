@@ -1,0 +1,7 @@
+Servidor,Disco,TamanhoGB,LivreGB
+srv-app-01,C:,128,40
+srv-app-01,D:,512,31
+srv-db-01,C:,128,9
+srv-db-01,E:,1024,410
+srv-arquivos-01,F:,0,0
+srv-backup-01,C:,256,20
