@@ -1,5 +1,7 @@
 # Exercício 5: plugins e skills
 
+> **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
+
 **Horário:** 11h15 · **Tempo:** 25 minutos
 
 **Objetivo:** instalar um plugin do marketplace oficial olhando o custo de contexto antes, usar uma skill dele e criar uma skill sua.

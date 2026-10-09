@@ -1,5 +1,7 @@
 # Exercício 3: permissões, auto mode, plan mode e rewind
 
+> **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
+
 **Horário:** 10h15 · **Tempo:** 25 minutos
 
 **Objetivo:** controlar quanto o Claude faz sozinho, planejar antes de editar, aprovar ou recusar uma edição e desfazer o que ele mudou.

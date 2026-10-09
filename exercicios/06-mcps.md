@@ -1,5 +1,7 @@
 # Exercício 6: MCPs
 
+> **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
+
 **Horário:** 11h40 · **Tempo:** 20 minutos
 
 **Objetivo:** conectar um servidor MCP ao Claude Code, conferir o status e usar a documentação oficial da Microsoft nas respostas. O instrutor mostra o Azure MCP só para leitura numa demo; quem tem Node.js pode repetir como desafio extra.

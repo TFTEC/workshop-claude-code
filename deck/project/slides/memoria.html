@@ -1,0 +1,35 @@
+<section id="memoria" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Memória e instruções</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">Quem dá instruções ao Claude</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;gap:32px;align-items:center;background:#FFFDF8;border-left:8px solid #16202E;border-radius:8px;padding:14px 28px">
+<p style="width:560px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#16202E">política da organização</p>
+<p style="flex:1;font-size:26px;color:#3F4A59">todos da empresa; ninguém desliga</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#FFFDF8;border-left:8px solid #3F4A59;border-radius:8px;padding:14px 28px">
+<p style="width:560px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#16202E">~/.claude/CLAUDE.md</p>
+<p style="flex:1;font-size:26px;color:#3F4A59">você, em todos os projetos</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#FFFDF8;border-left:8px solid #B4501F;border-radius:8px;padding:14px 28px">
+<p style="width:560px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#16202E">CLAUDE.md</p>
+<p style="flex:1;font-size:26px;color:#3F4A59">o projeto: vai no git e vale para o time</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#FFFDF8;border-left:8px solid #F2945A;border-radius:8px;padding:14px 28px">
+<p style="width:560px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#16202E">CLAUDE.local.md</p>
+<p style="flex:1;font-size:26px;color:#3F4A59">você, só neste projeto, fora do git</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#FFFDF8;border-left:8px solid #F2945A;border-radius:8px;padding:14px 28px">
+<p style="width:560px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#16202E">.claude/rules/*.md</p>
+<p style="flex:1;font-size:26px;color:#3F4A59">sem paths: sempre; com paths: ao mexer num arquivo que casa</p>
+</div>
+<div style="display:flex;gap:32px;align-items:center;background:#FFFDF8;border-left:8px solid #E8C9B3;border-radius:8px;padding:14px 28px">
+<p style="width:560px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;font-weight:600;color:#16202E">pasta/CLAUDE.md</p>
+<p style="flex:1;font-size:26px;color:#3F4A59">carrega quando o Claude mexe naquela pasta</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#16202E"><b>Tudo se soma, nada sobrescreve.</b> Confira com <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">/context</span> e edite com <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">/memory</span>.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/04-memoria-e-instrucoes.md · Exemplo: "responda em português e use PowerShell 7" no CLAUDE.md do projeto.</p>
+<aside>De cima para baixo, do mais amplo ao mais específico; o Claude lê todos e junta. Demo: abra uma sessão num projeto com CLAUDE.md, rode /context e mostre a lista "Memory files". Crie um CLAUDE.local.md com uma preferência pessoal, abra uma sessão nova e mostre que ele entrou. Por último, abra o /memory. Lembre: são pedidos, não impedimentos; quem impede uma ação de verdade é permissão e hook.</aside>
+</section>

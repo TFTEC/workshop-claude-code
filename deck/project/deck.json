@@ -1,15 +1,33 @@
 {
   "v": 4,
-  "createdOnFiles": { "v": 1, "at": "2026-10-08T18:00:00Z" },
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-08T18:00:00Z"
+  },
   "lists": "css",
   "title": "Claude Code na prática",
   "order": [
     "capa",
+    "jornada",
     "o-dia",
     "combinados",
+    "secao-manha",
+    "o-que-e",
     "superficies",
+    "primeira-sessao",
     "o-que-gasta",
+    "contexto",
     "botoes",
+    "permissoes",
+    "plan-mode",
+    "rewind",
+    "memoria",
+    "agents-md",
+    "skills",
+    "plugins",
+    "mcp",
+    "hooks",
+    "secao-tarde",
     "pergunta",
     "eixo",
     "maturidade",
@@ -17,21 +35,46 @@
     "aiox-x-enxuto",
     "formato-enxuto",
     "regra",
+    "relatorio",
+    "regras-finops",
+    "hook-freio",
+    "fluxo-skills",
+    "context-adr",
+    "paralelo",
+    "rodar-revisar",
+    "bastidores",
     "automacao",
+    "proximos-passos",
     "produto",
     "obrigado"
   ],
   "sections": {
-    "s1": { "description": "Abertura: o objetivo do dia, a pauta e os combinados.", "start": "capa" },
-    "s2": { "description": "Superfícies: onde o Claude Code roda.", "start": "superficies" },
-    "s3": { "description": "Modelo, effort e tokens: o que gasta e como medir.", "start": "o-que-gasta" },
-    "s4": { "description": "O eixo peças soltas → receita pronta e as opções do mercado.", "start": "pergunta" },
-    "s5": { "description": "AIOX × formato enxuto e a regra para escolher.", "start": "aiox-x-enxuto" },
-    "s6": { "description": "Encerramento: automação, o produto e os links.", "start": "automacao" }
+    "s1": {
+      "description": "Abertura: quem sou, a jornada até o formato enxuto, o dia e os combinados.",
+      "start": "capa"
+    },
+    "s2": {
+      "description": "Manhã: como cada funcionalidade do Claude Code funciona, em demonstração.",
+      "start": "secao-manha"
+    },
+    "s3": {
+      "description": "Tarde: o formato de trabalho, do mercado ao relatório FinOps rodando no Azure.",
+      "start": "secao-tarde"
+    },
+    "s4": {
+      "description": "Encerramento: automação, o que levar e os links.",
+      "start": "automacao"
+    }
   },
   "faces": {
-    "ibm-plex-sans": { "family": "IBM Plex Sans", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" },
-    "jetbrains-mono": { "family": "JetBrains Mono", "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" }
+    "ibm-plex-sans": {
+      "family": "IBM Plex Sans",
+      "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    },
+    "jetbrains-mono": {
+      "family": "JetBrains Mono",
+      "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+    }
   },
   "designSystems": []
 }

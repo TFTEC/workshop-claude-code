@@ -1,0 +1,23 @@
+<section id="agents-md" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Memória e instruções</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">AGENTS.md, imports e notas de graça</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:600;color:#B4501F">AGENTS.md</p>
+<p style="font-size:28px;line-height:1.45;color:#3F4A59">Padrão aberto, lido por vários agentes. O Claude Code também lê, mas, no padrão, só quando não existe CLAUDE.md.</p>
+<p style="font-size:26px;line-height:1.45;color:#6B7480">Para ler os dois: /config, opção Project instructions.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:600;color:#B4501F">@AGENTS.md</p>
+<p style="font-size:28px;line-height:1.45;color:#3F4A59">Um arquivo para todos os agentes: o CLAUDE.md importa o AGENTS.md na primeira linha e acrescenta o que for só do Claude.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:600;color:#B4501F">&lt;!-- nota --&gt;</p>
+<p style="font-size:28px;line-height:1.45;color:#3F4A59">Comentário HTML no CLAUDE.md sai antes de entrar no contexto: nota para humanos, sem gastar token.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/04-memoria-e-instrucoes.md</p>
+<aside>Demo: numa pasta com CLAUDE.md e AGENTS.md, rode /context e mostre que o AGENTS.md não aparece. Troque o Project instructions no /config para ler os dois, abra uma sessão nova e mostre que ele entrou. Volte ao padrão no fim, porque o /config grava no seu usuário e vale para todos os projetos. A opção /config só existe no terminal.</aside>
+</section>
