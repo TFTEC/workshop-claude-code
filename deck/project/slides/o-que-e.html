@@ -1,0 +1,36 @@
+<section id="o-que-e" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Fundamentos</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">O que é o Claude Code</h2>
+</div>
+<div style="display:flex;gap:64px;align-items:center">
+<div style="width:640px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:40px;line-height:1.3;color:#16202E">Um agente que trabalha no seu terminal: lê o projeto, planeja, age com ferramentas e confere o resultado.</p>
+<p style="font-size:28px;line-height:1.5;color:#3F4A59">As ferramentas dele: ler e editar arquivos, rodar comandos no terminal, buscar no código e, com MCP, falar com serviços de fora.</p>
+<p style="font-size:28px;line-height:1.5;color:#3F4A59"><b style="color:#16202E">Exemplo:</b> "por que este script falha?" Ele lê o script, roda, acha a linha do erro, corrige e roda de novo para conferir.</p>
+</div>
+<svg aria-label="O loop do agente: você pede; o Claude lê, planeja, age e verifica, e repete até terminar." viewBox="0 0 960 600" style="width:960px;height:600px">
+<defs><marker id="seta-loop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B4501F"/></marker></defs>
+<path d="M620,54 Q800,54 800,248" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-loop)"/>
+<path d="M800,352 Q800,546 626,546" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-loop)"/>
+<path d="M340,546 Q160,546 160,356" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-loop)"/>
+<path d="M160,252 Q160,54 334,54" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-loop)"/>
+<rect x="340" y="8" width="280" height="92" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="480" y="46" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="32" font-weight="600" fill="#16202E">Ler</text>
+<text x="480" y="82" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">arquivos, @, saídas</text>
+<rect x="660" y="254" width="280" height="92" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="800" y="292" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="32" font-weight="600" fill="#16202E">Planejar</text>
+<text x="800" y="328" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">passos, plan mode</text>
+<rect x="340" y="500" width="280" height="92" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="480" y="538" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="32" font-weight="600" fill="#16202E">Agir</text>
+<text x="480" y="574" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">editar, rodar, MCP</text>
+<rect x="20" y="254" width="280" height="92" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="160" y="292" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="32" font-weight="600" fill="#16202E">Verificar</text>
+<text x="160" y="328" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">testes, diff, saída</text>
+<ellipse cx="480" cy="300" rx="150" ry="70" fill="#16202E"/>
+<text x="480" y="312" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="32" font-weight="600" fill="#F7F5EF">Você pede</text>
+</svg>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/01-o-que-e-o-claude-code.md</p>
+<aside>Antes das features, o modelo mental: o Claude Code repete este loop até terminar o pedido. Demo: numa pasta com um script pequeno e um erro de propósito, peça "por que este script falha?" e narre cada volta do loop enquanto ele lê, roda, corrige e confere. Cada funcionalidade da manhã mexe numa parte do loop: o contexto decide o que ele lê, as permissões decidem quanto ele age sozinho, a memória e as skills mudam como ele planeja, e os hooks podem barrar uma ação antes de ela acontecer.</aside>
+</section>

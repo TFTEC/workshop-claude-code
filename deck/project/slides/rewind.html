@@ -1,0 +1,31 @@
+<section id="rewind" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Rewind</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">Desfazer o que o Claude mudou</h2>
+</div>
+<div style="display:flex;gap:16px;align-items:center">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:36px;font-weight:600;color:#16202E;background:#F2945A;padding:12px 28px;border-radius:8px">Esc Esc</p>
+<p style="font-size:32px;color:#3F4A59">com o campo vazio, ou</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:36px;font-weight:600;color:#16202E;background:#F2945A;padding:12px 28px;border-radius:8px">/rewind</p>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:40px">
+<h3 style="font-size:40px;font-weight:600;line-height:1.2;color:#16202E">Volta</h3>
+<ul style="font-size:28px;line-height:1.6;color:#3F4A59">
+<li>as edições de arquivo que o Claude fez</li>
+<li>a conversa, até o ponto que você escolher</li>
+<li>os dois juntos</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#F1E2D6;border:2px solid #B4501F;border-radius:16px;padding:40px">
+<h3 style="font-size:40px;font-weight:600;line-height:1.2;color:#16202E">Não volta</h3>
+<ul style="font-size:28px;line-height:1.6;color:#3F4A59">
+<li>comandos de terminal, como rm, mv e cp</li>
+<li>o que aconteceu fora da sua máquina</li>
+<li>mudanças que você fez fora do Claude</li>
+</ul>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/03-permissoes-plan-mode-e-rewind.md · Exemplo: a refatoração saiu ruim? Volte e peça de outro jeito.</p>
+<aside>Demo: deixe o Claude editar um arquivo, aperte Esc Esc com o campo vazio e mostre o menu, com as opções de restaurar o código, a conversa ou os dois. O ponto de segurança é a coluna da direita: o rewind não desfaz comando de terminal nem o que já saiu da máquina. Para ambiente sensível, a proteção é permissão e hook, não o rewind.</aside>
+</section>

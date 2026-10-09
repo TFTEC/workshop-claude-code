@@ -1,0 +1,28 @@
+<section id="skills" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Skills</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">Skill: uma receita que o Claude segue</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:stretch">
+<div style="width:820px;display:flex;flex-direction:column;gap:16px;background:#16202E;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#F2945A">.claude/skills/gerar-runbook/SKILL.md</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;line-height:1.5;color:#C9D3DF">---<br>name: gerar-runbook<br>description: Gera um runbook de<br>&nbsp;&nbsp;troubleshooting para um serviço<br>&nbsp;&nbsp;Azure informado.<br>---<br>Escreva o runbook em markdown:<br>sintomas, causas prováveis,<br>comandos de diagnóstico e solução.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">Como entra</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">Você digita <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">/gerar-runbook</span>, ou o Claude escolhe pela description.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">Onde mora</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">No projeto, no seu usuário ou num plugin.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">Quanto custa</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">A description fica à vista; o corpo só entra quando a skill é usada.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/05-skills-plugins-mcp-e-hooks.md</p>
+<aside>Demo: crie a pasta .claude/skills/gerar-runbook com esse SKILL.md, rode /reload-skills (pasta criada no meio da sessão precisa disso) e chame /gerar-runbook App Service. Depois, sem digitar o nome, peça "monta um runbook para o Azure SQL" e mostre o Claude escolhendo a skill sozinho pela description. Por isso a description é a parte mais importante: ela diz quando usar.</aside>
+</section>

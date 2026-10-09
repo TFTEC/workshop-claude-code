@@ -1,0 +1,46 @@
+<section id="paralelo" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Implementar em paralelo · 15h20</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">Um ticket, uma worktree, uma sessão</h2>
+</div>
+<div style="display:flex;gap:64px;align-items:center">
+<svg aria-label="Ordem dos tickets prontos: o 01, o motor, primeiro; depois 02, 03, 04 e 05 em paralelo; o 06 depende do 02 e do 03; o 07 depende do 06." viewBox="0 0 900 480" style="width:900px;height:480px">
+<rect x="210" y="0" width="210" height="480" rx="16" fill="#F1E2D6"/>
+<text x="315" y="474" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" font-weight="600" fill="#B4501F">em paralelo</text>
+<g stroke="#16202E" stroke-width="3" fill="none">
+<path d="M150,212 L226,44"/><path d="M150,222 L226,154"/><path d="M150,232 L226,264"/><path d="M150,242 L226,374"/>
+<path d="M404,44 L486,212"/><path d="M404,154 L486,222"/><path d="M632,227 L700,227"/>
+</g>
+<rect x="0" y="190" width="150" height="76" rx="12" fill="#16202E"/>
+<text x="75" y="222" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#F2945A">01</text>
+<text x="75" y="254" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#F7F5EF">motor</text>
+<rect x="226" y="6" width="178" height="76" rx="12" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="315" y="38" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#B4501F">02</text>
+<text x="315" y="70" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">FIN-02 a 04</text>
+<rect x="226" y="116" width="178" height="76" rx="12" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="315" y="148" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#B4501F">03</text>
+<text x="315" y="180" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">FIN-05 a 07</text>
+<rect x="226" y="226" width="178" height="76" rx="12" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="315" y="258" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#B4501F">04</text>
+<text x="315" y="290" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">fonte Azure</text>
+<rect x="226" y="336" width="178" height="76" rx="12" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="315" y="368" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#B4501F">05</text>
+<text x="315" y="400" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">anonimizar</text>
+<rect x="486" y="190" width="146" height="76" rx="12" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="559" y="222" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#B4501F">06</text>
+<text x="559" y="254" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">economia</text>
+<rect x="700" y="190" width="146" height="76" rx="12" fill="#FFFDF8" stroke="#16202E" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="773" y="222" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#B4501F">07</text>
+<text x="773" y="254" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#3F4A59">bônus</text>
+</svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:10px;padding:14px 20px">claude -w ticket-04 <span style="color:#6B7480">· worktree</span></p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:10px;padding:14px 20px">claude --bg <span style="color:#6B7480">· segundo plano</span></p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:10px;padding:14px 20px">claude agents <span style="color:#6B7480">· agent view</span></p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:10px;padding:14px 20px">/remote-control <span style="color:#6B7480">· celular</span></p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:10px;padding:14px 20px">git merge <span style="color:#6B7480">· juntar na main</span></p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Exercício: exercicios/08-implementar-em-paralelo.md · Antes de tudo: "worktree": {"baseRef": "head"} no settings.json</p>
+<aside>O 01 vai primeiro, na sessão principal, com /mattpocock-skills:implement. Depois do commit do 01, os tickets 02 a 05 rodam ao mesmo tempo, cada um na sua worktree, alguns em segundo plano e acompanhados pelo agent view. Mostre o Remote Control no celular. Sem o baseRef head, a worktree nasce da origin, sem o freio e sem o ticket 01. O Remote Control exige assinatura do claude.ai; quem usa só a API acompanha pelo agent view.</aside>
+</section>

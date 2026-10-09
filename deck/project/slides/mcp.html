@@ -1,0 +1,26 @@
+<section id="mcp" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">MCP</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">MCP: ferramentas de fora, dentro do Claude</h2>
+</div>
+<svg aria-label="O Claude Code conversa com servidores MCP: o Microsoft Learn, com a documentação oficial, por HTTP e sem login; e o Azure MCP, com os seus recursos, rodando na máquina e só para leitura." viewBox="0 0 1664 330" style="width:1664px;height:330px">
+<defs><marker id="seta-mcp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B4501F"/></marker></defs>
+<rect x="0" y="105" width="380" height="120" rx="16" fill="#16202E"/>
+<text x="190" y="160" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="34" font-weight="600" fill="#F7F5EF">Claude Code</text>
+<text x="190" y="198" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="24" fill="#C9D3DF">cliente MCP</text>
+<path d="M380,150 L640,75" fill="none" stroke="#B4501F" stroke-width="4" marker-start="url(#seta-mcp)" marker-end="url(#seta-mcp)"/>
+<path d="M380,180 L640,255" fill="none" stroke="#B4501F" stroke-width="4" marker-start="url(#seta-mcp)" marker-end="url(#seta-mcp)"/>
+<rect x="646" y="10" width="1018" height="130" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="680" y="62" font-family="IBM Plex Sans, Arial, sans-serif" font-size="32" font-weight="600" fill="#16202E">Microsoft Learn</text>
+<text x="680" y="108" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#3F4A59">a documentação oficial da Microsoft · por HTTP · sem login</text>
+<rect x="646" y="190" width="1018" height="130" rx="16" fill="#F1E2D6" stroke="#B4501F" stroke-width="3"/>
+<text x="680" y="242" font-family="IBM Plex Sans, Arial, sans-serif" font-size="32" font-weight="600" fill="#16202E">Azure MCP</text>
+<text x="680" y="288" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#3F4A59">os seus recursos · roda na máquina com npx · sempre com --read-only</text>
+</svg>
+<div style="display:flex;flex-direction:column;gap:12px;background:#16202E;border-radius:16px;padding:28px 36px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#C9D3DF">claude mcp add --transport http microsoft-learn https://learn.microsoft.com/api/mcp</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#C9D3DF">/mcp <span style="color:#6B7480">· mostra o status de cada servidor</span></p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/05-skills-plugins-mcp-e-hooks.md · Exemplo: "como configuro alertas de custo no Azure? use a documentação oficial"</p>
+<aside>Demo: conecte o MCP do Microsoft Learn com o comando do slide, confira em /mcp e faça uma pergunta de Azure pedindo para usar a documentação oficial; mostre as fontes na resposta. Em seguida, a demo do Azure MCP com --read-only: claude mcp add --transport stdio azure-mcp -- npx -y @azure/mcp@latest server start --read-only, conferido com claude mcp get azure-mcp. Antes, aponte a subscription padrão do az para a do lab e devolva no fim. Não instale o plugin azure@claude-plugins-official, que liga o servidor sem --read-only.</aside>
+</section>

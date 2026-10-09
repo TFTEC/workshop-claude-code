@@ -1,0 +1,38 @@
+<section id="contexto" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Modelo, effort e tokens</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">A janela de contexto</h2>
+</div>
+<div style="display:flex;gap:80px;align-items:center">
+<svg aria-label="A janela de contexto ocupada, de cima para baixo: instruções, skills e MCP, a conversa, os arquivos lidos, as saídas de comandos e o espaço livre." viewBox="0 0 640 600" style="width:640px;height:600px">
+<rect x="0" y="0" width="220" height="70" fill="#16202E"/>
+<rect x="0" y="70" width="220" height="60" fill="#3F4A59"/>
+<rect x="0" y="130" width="220" height="150" fill="#B4501F"/>
+<rect x="0" y="280" width="220" height="130" fill="#F2945A"/>
+<rect x="0" y="410" width="220" height="70" fill="#E8C9B3"/>
+<rect x="2" y="482" width="216" height="116" fill="#FFFDF8" stroke="#6B7480" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="248" y="44" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#16202E">Instruções: CLAUDE.md e rules</text>
+<text x="248" y="109" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#16202E">Skills e MCP carregados</text>
+<text x="248" y="214" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#16202E">A conversa</text>
+<text x="248" y="354" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#16202E">Arquivos lidos</text>
+<text x="248" y="454" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#16202E">Saídas de comandos</text>
+<text x="248" y="548" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#6B7480">Livre</text>
+</svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:32px 40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:600;color:#B4501F">/context</p>
+<p style="font-size:28px;line-height:1.4;color:#3F4A59">Mostra o que ocupa a janela agora.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:32px 40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:600;color:#B4501F">/compact</p>
+<p style="font-size:28px;line-height:1.4;color:#3F4A59">Resume a conversa e libera espaço.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:32px 40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:32px;font-weight:600;color:#B4501F">/usage</p>
+<p style="font-size:28px;line-height:1.4;color:#3F4A59">Custo estimado e limites do plano. O mesmo que /cost.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/02-sessao-contexto-e-custo.md</p>
+<aside>Tudo isto divide a mesma janela. Leia um arquivo grande ao vivo e rode /context antes e depois: a fatia dos arquivos cresce. Janela cheia é mais cara e o Claude se confunde mais, por isso /compact e /clear existem. No /usage, o valor em dólar é uma estimativa a preço de tabela, que o assinante não paga.</aside>
+</section>

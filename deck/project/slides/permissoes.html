@@ -1,0 +1,34 @@
+<section id="permissoes" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Permissões</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">Quanto o Claude faz sozinho</h2>
+</div>
+<div style="display:flex;gap:56px;align-items:center">
+<table style="width:1000px;font-family:'IBM Plex Sans', Arial, sans-serif;font-size:26px;color:#3F4A59">
+<tr><th style="width:34%;color:#16202E">O que a tela mostra</th><th style="width:66%;color:#16202E">O que ele faz</th></tr>
+<tr><td style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#16202E">manual mode on</td><td>Só lê. Pergunta antes de editar ou de rodar a maioria dos comandos.</td></tr>
+<tr><td style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#16202E">accept edits on</td><td>Edita os arquivos da pasta sem perguntar. Pergunta antes dos outros comandos.</td></tr>
+<tr><td style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#16202E">plan mode on</td><td>Lê e pesquisa, mas não edita. Termina com um plano para você aprovar.</td></tr>
+<tr style="background:#F1E2D6"><td style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#16202E">auto mode on</td><td>Faz sem perguntar. Um classificador revisa cada ação e barra o que foge do pedido.</td></tr>
+</table>
+<svg aria-label="O ciclo do Shift+Tab: auto mode, manual mode, accept edits, plan mode e de volta ao auto mode." viewBox="0 0 600 560" style="width:600px;height:560px">
+<defs><marker id="seta-ciclo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B4501F"/></marker></defs>
+<path d="M410,50 Q500,50 500,234" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-ciclo)"/>
+<path d="M500,326 Q500,510 416,510" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-ciclo)"/>
+<path d="M190,510 Q100,510 100,326" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-ciclo)"/>
+<path d="M100,234 Q100,50 184,50" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-ciclo)"/>
+<rect x="190" y="10" width="220" height="80" rx="16" fill="#F1E2D6" stroke="#B4501F" stroke-width="3"/>
+<text x="300" y="59" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="600" fill="#16202E">auto mode</text>
+<rect x="380" y="240" width="220" height="80" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="490" y="289" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="600" fill="#16202E">manual</text>
+<rect x="190" y="470" width="220" height="80" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="300" y="519" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="600" fill="#16202E">accept edits</text>
+<rect x="0" y="240" width="220" height="80" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="110" y="289" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="600" fill="#16202E">plan mode</text>
+<circle cx="300" cy="280" r="84" fill="#16202E"/>
+<text x="300" y="290" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="26" font-weight="600" fill="#F7F5EF">Shift+Tab</text>
+</svg>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/03-permissoes-plan-mode-e-rewind.md · Desde a 2.1.283, o terminal abre no auto mode.</p>
+<aside>Demo: com o campo de digitar vazio, aperte Shift+Tab devagar e mostre a linha embaixo do campo mudando. Depois peça uma edição pequena no manual mode e mostre a pergunta de permissão; repita no accept edits e veja que ela não aparece. No Windows, Alt+M também troca de modo. Se o auto mode não aparecer no ciclo, a organização do aluno desligou esse modo; o exercício segue com os outros três.</aside>
+</section>

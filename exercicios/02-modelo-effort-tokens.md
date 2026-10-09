@@ -1,5 +1,7 @@
 # Exercício 2: modelo, effort e tokens
 
+> **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
+
 **Horário:** 9h50 · **Tempo:** 25 minutos
 
 **Objetivo:** rodar a mesma tarefa pequena com modelos e níveis de effort diferentes e ver, nos números, o que gasta tokens.

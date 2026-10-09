@@ -1,0 +1,38 @@
+<section id="hooks" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Hooks</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">Hook: quem roda é o Claude Code</h2>
+</div>
+<svg aria-label="Fluxo de um hook PreToolUse: o Claude vai rodar um comando; o Claude Code entrega um JSON ao seu script; com exit 0 o comando segue; com exit 2 ele é barrado e o stderr vira o motivo." viewBox="0 0 1664 340" style="width:1664px;height:340px">
+<defs><marker id="seta-hook" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B4501F"/></marker></defs>
+<rect x="0" y="120" width="360" height="110" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="180" y="166" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="600" fill="#16202E">O Claude vai rodar</text>
+<text x="180" y="204" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="600" fill="#16202E">um comando</text>
+<path d="M360,175 L414,175" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-hook)"/>
+<rect x="420" y="120" width="380" height="110" rx="16" fill="#16202E"/>
+<text x="610" y="166" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="28" font-weight="600" fill="#F2945A">PreToolUse</text>
+<text x="610" y="204" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#F7F5EF">JSON no stdin</text>
+<path d="M800,175 L854,175" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-hook)"/>
+<rect x="860" y="120" width="320" height="110" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="1020" y="166" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="600" fill="#16202E">o seu script</text>
+<text x="1020" y="204" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#3F4A59">decide</text>
+<path d="M1180,160 Q1210,70 1244,70" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-hook)"/>
+<path d="M1180,190 Q1210,280 1244,280" fill="none" stroke="#B4501F" stroke-width="4" marker-end="url(#seta-hook)"/>
+<rect x="1250" y="20" width="414" height="100" rx="16" fill="#FFFDF8" stroke="#16202E" stroke-width="3"/>
+<text x="1280" y="62" font-family="JetBrains Mono, Courier New, monospace" font-size="28" font-weight="600" fill="#16202E">exit 0</text>
+<text x="1280" y="100" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#3F4A59">o comando segue</text>
+<rect x="1250" y="230" width="414" height="100" rx="16" fill="#F1E2D6" stroke="#B4501F" stroke-width="3"/>
+<text x="1280" y="272" font-family="JetBrains Mono, Courier New, monospace" font-size="28" font-weight="600" fill="#16202E">exit 2</text>
+<text x="1280" y="310" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" fill="#3F4A59">barrado; o stderr é o motivo</text>
+</svg>
+<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+<p style="font-size:26px;color:#3F4A59">Outros eventos:</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:8px;padding:8px 16px">SessionStart</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:8px;padding:8px 16px">UserPromptSubmit</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:8px;padding:8px 16px">PostToolUse</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#16202E;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:8px;padding:8px 16px">Stop</p>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#16202E"><b>Instrução é pedido; hook é regra.</b> Registro em <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">.claude/settings.json</span>, conferência com <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">/hooks</span>.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/05-skills-plugins-mcp-e-hooks.md · Exemplo: um hook que barra qualquer comando que apague recursos.</p>
+<aside>Demo: num projeto de teste, um hook PreToolUse simples que barra qualquer comando com "rm -rf". Mostre o registro no .claude/settings.json, o /hooks listando o hook e o Claude tentando rodar o comando e sendo barrado, com o motivo vindo do stderr. O ponto: o modelo pode ignorar uma instrução do CLAUDE.md, mas não passa por cima de um hook, porque quem roda o hook é o Claude Code. À tarde, a turma cria um hook assim para o Azure.</aside>
+</section>

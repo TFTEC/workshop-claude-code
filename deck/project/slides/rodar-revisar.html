@@ -1,0 +1,26 @@
+<section id="rodar-revisar" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Rodar e revisar · 16h20</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">No seu Azure, sem expor nada</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#16202E;border-radius:16px;padding:28px 36px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#C9D3DF">pwsh -File relatorio/Invoke-RelatorioFinOps.ps1 -SubscriptionId &lt;id&gt; -Fonte Azure</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;color:#F2945A">… -Anonimizar -Saida saida/anonimizado</p>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:32px">
+<h3 style="font-size:34px;font-weight:600;color:#16202E">Economia estimada</h3>
+<p style="font-size:26px;line-height:1.45;color:#3F4A59">Em R$ por mês, pelo preço de tabela ou pelo que o Advisor informou.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#F1E2D6;border:2px solid #B4501F;border-radius:16px;padding:32px">
+<h3 style="font-size:34px;font-weight:600;color:#16202E">"Não sei"</h3>
+<p style="font-size:26px;line-height:1.45;color:#3F4A59">Sem preço confiável. O relatório diz o motivo, em vez de inventar.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:32px">
+<h3 style="font-size:34px;font-weight:600;color:#16202E">code-review</h3>
+<p style="font-size:26px;line-height:1.45;color:#3F4A59"><span style="font-family:'JetBrains Mono', 'Courier New', monospace">/mattpocock-skills:code-review</span>: Standards e Spec, em dois subagentes.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Exercício: exercicios/09-rodar-e-revisar.md · Rode o relatório no seu terminal: nomes e custos reais não entram na conversa.</p>
+<aside>Demo no lab de desperdício, sempre com -Anonimizar e com o ID numa variável preparada antes: 17 achados em 11 regras, R$ 90 por mês em 3 achados, o disco nunca anexado com "não sei" e o motivo, e o Advisor em outra moeda. Depois a turma roda na própria subscription. Para a revisão, use o nome completo da skill: o /code-review sozinho chama a skill nativa do Claude Code.</aside>
+</section>

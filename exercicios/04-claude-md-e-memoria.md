@@ -1,5 +1,7 @@
 # Exercício 4: CLAUDE.md e memória
 
+> **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
+
 **Horário:** 10h50 · **Tempo:** 25 minutos
 
 **Objetivo:** entender quais arquivos de instrução o Claude Code carrega, quando carrega cada um e como conferir isso.

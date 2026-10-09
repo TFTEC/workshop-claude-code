@@ -1,5 +1,7 @@
 # Exercício 1: primeira sessão
 
+> **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
+
 **Horário:** 9h30 · **Tempo:** 20 minutos
 
 **Objetivo:** abrir o Claude Code no repositório do aluno e usar os quatro gestos básicos de uma sessão: pedir, apontar um arquivo, rodar um comando e mostrar um erro.
