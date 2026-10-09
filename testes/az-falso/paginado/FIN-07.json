@@ -1,0 +1,29 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Compute/virtualMachines/vm-ficticia-servidor-de-arquivos",
+      "name": "vm-ficticia-servidor-de-arquivos",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "tipoDoRecurso": "Microsoft.Compute/virtualMachines",
+      "problema": "VM com pouco uso: um tamanho menor dá conta da carga",
+      "impacto": "High",
+      "economiaAdvisor": 412.5,
+      "moeda": "BRL"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-loja-online/providers/Microsoft.Sql/servers/sql-ficticio-relatorios/databases/banco-ficticio-relatorios",
+      "name": "banco-ficticio-relatorios",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "tipoDoRecurso": "Microsoft.Sql/servers/databases",
+      "problema": "Banco com mais capacidade do que o uso pede",
+      "impacto": "Medium",
+      "economiaAdvisor": 158.9,
+      "moeda": "BRL"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

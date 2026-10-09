@@ -1,0 +1,25 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-loja-online/providers/Microsoft.Network/networkInterfaces/nic-ficticia-com-ip-publico",
+      "name": "nic-ficticia-com-ip-publico",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "ipPrivado": "10.0.2.5",
+      "temIpPublico": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Network/networkInterfaces/nic-ficticia-sobra-da-vm-apagada",
+      "name": "nic-ficticia-sobra-da-vm-apagada",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "ipPrivado": "10.0.1.4",
+      "temIpPublico": false
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

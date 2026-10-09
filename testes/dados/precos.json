@@ -1,0 +1,149 @@
+{
+  "BillingCurrency": "BRL",
+  "CustomerEntityId": "Default",
+  "CustomerEntityType": "Retail",
+  "Items": [
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 30.0, "unitPrice": 30.0,
+      "armRegionName": "eastus", "location": "US East", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "E6 LRS Disk", "productName": "Standard SSD Managed Disks", "skuName": "E6 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "1/Month",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": "Standard_SSD_Managed_Disk_E6"
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 9.5, "unitPrice": 9.5,
+      "armRegionName": "eastus", "location": "US East", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "E6 LRS Disk Mount", "productName": "Standard SSD Managed Disks", "skuName": "E6 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "1/Month",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.01, "unitPrice": 0.01,
+      "armRegionName": "eastus", "location": "US East", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "E6 LRS Disk Operations", "productName": "Standard SSD Managed Disks", "skuName": "E6 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "10K",
+      "type": "Consumption", "isPrimaryMeterRegion": false, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 70.0, "unitPrice": 70.0,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "S10 LRS Disk", "productName": "Standard HDD Managed Disks", "skuName": "S10 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "1/Month",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": "Standard_HDD_Managed_Disk_S10"
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.003, "unitPrice": 0.003,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "S10 LRS Disk Operations", "productName": "Standard HDD Managed Disks", "skuName": "S10 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "10K",
+      "type": "Consumption", "isPrimaryMeterRegion": false, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 340.0, "unitPrice": 340.0,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "P15 LRS Disk", "productName": "Premium SSD Managed Disks", "skuName": "P15 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "1/Month",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": "Premium_SSD_Managed_Disk_P15"
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 340.0, "unitPrice": 340.0,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "P15 LRS Disk", "productName": "Premium Page Blob", "skuName": "P15 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "1/Month",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 9.5, "unitPrice": 9.5,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "P15 LRS Disk Mount", "productName": "Premium SSD Managed Disks", "skuName": "P15 LRS",
+      "serviceName": "Storage", "serviceFamily": "Storage", "unitOfMeasure": "1/Month",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.03, "unitPrice": 0.03,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "Standard IPv4 Static Public IP", "productName": "IP Addresses", "skuName": "Standard",
+      "serviceName": "Virtual Network", "serviceFamily": "Networking", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": false, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.025, "unitPrice": 0.025,
+      "armRegionName": "eastus", "location": "US East", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "Standard IPv4 Static Public IP", "productName": "IP Addresses", "skuName": "Standard",
+      "serviceName": "Virtual Network", "serviceFamily": "Networking", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": false, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.06, "unitPrice": 0.06,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "Global IPv4 Static Public IP", "productName": "IP Addresses", "skuName": "Global",
+      "serviceName": "Virtual Network", "serviceFamily": "Networking", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": false, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.02, "unitPrice": 0.02,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "Basic IPv4 Static Public IP", "productName": "IP Addresses", "skuName": "Basic",
+      "serviceName": "Virtual Network", "serviceFamily": "Networking", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": false, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.022, "unitPrice": 0.022,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "Basic IPv4 Dynamic Public IP", "productName": "IP Addresses", "skuName": "Basic",
+      "serviceName": "Virtual Network", "serviceFamily": "Networking", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": false, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.6, "unitPrice": 0.6,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "S1 App", "productName": "Azure App Service Standard Plan", "skuName": "S1",
+      "serviceName": "Azure App Service", "serviceFamily": "Compute", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.4, "unitPrice": 0.4,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "S1 App", "productName": "Azure App Service Standard Plan", "skuName": "S1",
+      "serviceName": "Azure App Service", "serviceFamily": "Compute", "unitOfMeasure": "1 Hour",
+      "type": "DevTestConsumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.55, "unitPrice": 0.55,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "S1 App", "productName": "Azure App Service Standard Plan - Linux", "skuName": "S1",
+      "serviceName": "Azure App Service", "serviceFamily": "Compute", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 2.0, "unitPrice": 2.0,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "P1 v3 App", "productName": "Azure App Service Premium v3 Plan", "skuName": "P1 v3",
+      "serviceName": "Azure App Service", "serviceFamily": "Compute", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": "Standard_P1_v3_Windows"
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 1.1, "unitPrice": 1.1,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "P1 v3 App", "productName": "Azure App Service Premium v3 Plan - Linux", "skuName": "P1 v3",
+      "serviceName": "Azure App Service", "serviceFamily": "Compute", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": "Azure_App_Service_Premium_v3_Plan_Linux_P1_v3"
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.1, "unitPrice": 0.1,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "B1", "productName": "Azure App Service Basic Plan - Linux", "skuName": "B1",
+      "serviceName": "Azure App Service", "serviceFamily": "Compute", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    },
+    {
+      "currencyCode": "BRL", "tierMinimumUnits": 0.0, "retailPrice": 0.8, "unitPrice": 0.8,
+      "armRegionName": "brazilsouth", "location": "BR South", "effectiveStartDate": "2024-01-01T00:00:00Z",
+      "meterName": "P0v3 App", "productName": "Azure App Service Premium v3 Plan", "skuName": "P0v3",
+      "serviceName": "Azure App Service", "serviceFamily": "Compute", "unitOfMeasure": "1 Hour",
+      "type": "Consumption", "isPrimaryMeterRegion": true, "armSkuName": ""
+    }
+  ],
+  "NextPageLink": null,
+  "Count": 20
+}

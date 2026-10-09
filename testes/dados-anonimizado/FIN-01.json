@@ -1,0 +1,44 @@
+{
+  "count": 3,
+  "data": [
+    {
+      "id": "/subscriptions/f1e2d3c4-b5a6-4789-8abc-def012345678/resourceGroups/zzrg-cliente-secreto/providers/Microsoft.Compute/disks/zzdisco-sigiloso-alfa",
+      "name": "zzdisco-sigiloso-alfa",
+      "resourceGroup": "zzrg-cliente-secreto",
+      "subscriptionId": "f1e2d3c4-b5a6-4789-8abc-def012345678",
+      "location": "brazilsouth",
+      "sku": "Premium_LRS",
+      "tamanhoGB": 512,
+      "criadoEm": "2025-03-14T10:00:00Z",
+      "origem": "/subscriptions/f1e2d3c4-b5a6-4789-8abc-def012345678/resourceGroups/zzrg-cliente-secreto/providers/Microsoft.Compute/snapshots/zzsnap-backup-confidencial",
+      "donoId": "9a8b7c6d-5e4f-4a3b-8c2d-1e0f9a8b7c6d",
+      "custoMensalBRL": 123.45
+    },
+    {
+      "id": "/subscriptions/f1e2d3c4-b5a6-4789-8abc-def012345678/resourceGroups/zzrg-cliente-secreto/providers/Microsoft.Compute/disks/zzdisco-sigiloso-beta",
+      "name": "zzdisco-sigiloso-beta",
+      "resourceGroup": "zzrg-cliente-secreto",
+      "subscriptionId": "f1e2d3c4-b5a6-4789-8abc-def012345678",
+      "location": "brazilsouth",
+      "sku": "Standard_LRS",
+      "tamanhoGB": 256,
+      "criadoEm": "2025-08-01T08:30:00Z",
+      "copiaDe": "zzdisco-sigiloso-alfa",
+      "custoMensalBRL": 125
+    },
+    {
+      "id": "/subscriptions/f1e2d3c4-b5a6-4789-8abc-def012345678/resourceGroups/zzrg-projeto-ultrasecreto/providers/Microsoft.Compute/disks/zzdisco-sigiloso-gama",
+      "name": "zzdisco-sigiloso-gama",
+      "resourceGroup": "zzrg-projeto-ultrasecreto",
+      "subscriptionId": "f1e2d3c4-b5a6-4789-8abc-def012345678",
+      "location": "eastus",
+      "sku": "StandardSSD_LRS",
+      "tamanhoGB": 128,
+      "criadoEm": "2026-02-10T16:45:00Z",
+      "observacao": "sobra da migração do zzdisco-sigiloso-alfa",
+      "custoMensalBRL": 87.5
+    }
+  ],
+  "skip_token": null,
+  "total_records": 3
+}

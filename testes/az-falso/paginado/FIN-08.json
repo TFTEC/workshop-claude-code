@@ -1,0 +1,27 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-loja-online/providers/Microsoft.Network/loadBalancers/lb-ficticio-sem-pool",
+      "name": "lb-ficticio-sem-pool",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "sku": "Standard",
+      "pools": 0,
+      "regras": 2
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Network/loadBalancers/lb-ficticio-sem-regras",
+      "name": "lb-ficticio-sem-regras",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "sku": "Standard",
+      "pools": 1,
+      "regras": 0
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

@@ -1,0 +1,27 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.CostManagement/query/00000000-0000-0000-0000-000000000000",
+  "name": "00000000-0000-0000-0000-000000000000",
+  "type": "Microsoft.CostManagement/query",
+  "location": null,
+  "sku": null,
+  "eTag": null,
+  "properties": {
+    "nextLink": null,
+    "columns": [
+      { "name": "PreTaxCost", "type": "Number" },
+      { "name": "ResourceId", "type": "String" },
+      { "name": "Currency", "type": "String" }
+    ],
+    "rows": [
+      [312.4, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-loja-online/providers/microsoft.compute/disks/disco-sobra-da-migracao", "BRL"],
+      [95.1249, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-loja-online/providers/microsoft.network/loadbalancers/lb-ficticio-sem-pool", "BRL"],
+      [1830.5512, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-laboratorio/providers/microsoft.network/applicationgateways/appgw-ficticio-sem-pool", "BRL"],
+      [27.9, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-laboratorio/providers/microsoft.compute/snapshots/snapshot-ficticio-backup-manual", "BRL"],
+      [0.0, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-laboratorio/providers/microsoft.network/publicipaddresses/ip-ficticio-sobra-do-teste", "BRL"],
+      [48.3, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-loja-online/providers/microsoft.compute/virtualmachines/vm-ficticia-teste-de-carga", "BRL"],
+      [905.0, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-laboratorio/providers/microsoft.compute/virtualmachines/vm-ficticia-servidor-de-arquivos", "BRL"],
+      [61.7, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-monitoracao/providers/microsoft.operationalinsights/workspaces/log-ficticio-central", "BRL"],
+      [123.0, "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-ficticio-laboratorio/providers/microsoft.storage/storageaccounts/contaficticiadelogs", "BRL"]
+    ]
+  }
+}

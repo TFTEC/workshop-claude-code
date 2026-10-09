@@ -1,0 +1,29 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Web/serverfarms/plano-ficticio-homologacao",
+      "name": "plano-ficticio-homologacao",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "sku": "S1",
+      "camada": "Standard",
+      "instancias": 2,
+      "so": "Windows"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-loja-online/providers/Microsoft.Web/serverfarms/plano-ficticio-site-antigo",
+      "name": "plano-ficticio-site-antigo",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "sku": "P1v3",
+      "camada": "PremiumV3",
+      "instancias": 1,
+      "so": "Linux"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

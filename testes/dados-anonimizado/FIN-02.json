@@ -1,0 +1,31 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/f1e2d3c4-b5a6-4789-8abc-def012345678/resourceGroups/zzrg-cliente-secreto/providers/Microsoft.Network/publicIPAddresses/zzip-sigiloso-v4",
+      "name": "zzip-sigiloso-v4",
+      "resourceGroup": "zzrg-cliente-secreto",
+      "subscriptionId": "f1e2d3c4-b5a6-4789-8abc-def012345678",
+      "location": "brazilsouth",
+      "sku": "Standard",
+      "alocacao": "Static",
+      "ip": "198.51.100.23",
+      "camada": "Regional",
+      "versao": "IPv4"
+    },
+    {
+      "id": "/subscriptions/f1e2d3c4-b5a6-4789-8abc-def012345678/resourceGroups/zzrg-cliente-secreto/providers/Microsoft.Network/publicIPAddresses/zzip-sigiloso-v6",
+      "name": "zzip-sigiloso-v6",
+      "resourceGroup": "zzrg-cliente-secreto",
+      "subscriptionId": "f1e2d3c4-b5a6-4789-8abc-def012345678",
+      "location": "brazilsouth",
+      "sku": "Standard",
+      "alocacao": "Static",
+      "ip": "2001:db8:4f::a1",
+      "camada": "Regional",
+      "versao": "IPv6"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

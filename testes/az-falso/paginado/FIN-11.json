@@ -1,0 +1,37 @@
+{
+  "count": 3,
+  "data": [
+    {
+      "name": "microsoft.storage/storageaccounts",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "recursos": 4,
+      "semCostCenter": 4,
+      "semOwner": 2,
+      "semEnvironment": 0,
+      "outraGrafia": 1,
+      "tagsQueFaltam": "CostCenter, Owner"
+    },
+    {
+      "name": "microsoft.keyvault/vaults",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "recursos": 2,
+      "semCostCenter": 1,
+      "semOwner": 1,
+      "semEnvironment": 1,
+      "outraGrafia": 0,
+      "tagsQueFaltam": "CostCenter, Owner, Environment"
+    },
+    {
+      "name": "microsoft.network/networksecuritygroups",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "recursos": 1,
+      "semCostCenter": 0,
+      "semOwner": 0,
+      "semEnvironment": 0,
+      "outraGrafia": 1,
+      "tagsQueFaltam": "nenhuma"
+    }
+  ],
+  "skip_token": null,
+  "total_records": 3
+}

@@ -1,0 +1,29 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-loja-online/providers/Microsoft.Compute/snapshots/snapshot-ficticio-antes-da-atualizacao",
+      "name": "snapshot-ficticio-antes-da-atualizacao",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "tamanhoGB": 128,
+      "incremental": false,
+      "criadoEm": "2026-03-15T10:00:00Z",
+      "idadeDias": 207
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Compute/snapshots/snapshot-ficticio-backup-manual",
+      "name": "snapshot-ficticio-backup-manual",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "tamanhoGB": 64,
+      "incremental": true,
+      "criadoEm": "2026-07-01T08:30:00Z",
+      "idadeDias": 99
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}

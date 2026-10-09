@@ -1,0 +1,29 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Compute/disks/disco-copia-antiga-do-banco",
+      "name": "disco-copia-antiga-do-banco",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "sku": "StandardSSD_LRS",
+      "tamanhoGB": 64,
+      "criadoEm": "2025-06-12T18:45:00Z",
+      "nuncaAnexado": 0
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Compute/disks/disco-esquecido-vm-teste",
+      "name": "disco-esquecido-vm-teste",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "sku": "Standard_LRS",
+      "tamanhoGB": 128,
+      "criadoEm": "2025-11-03T09:00:00Z",
+      "nuncaAnexado": false
+    }
+  ],
+  "skip_token": null,
+  "total_records": 3
+}

@@ -1,0 +1,18 @@
+{
+  "count": 1,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-loja-online/providers/Microsoft.Compute/disks/disco-sobra-da-migracao",
+      "name": "disco-sobra-da-migracao",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "sku": "Premium_LRS",
+      "tamanhoGB": 256,
+      "criadoEm": "2026-01-20T14:30:00Z",
+      "nuncaAnexado": 0
+    }
+  ],
+  "skip_token": null,
+  "total_records": 3
+}

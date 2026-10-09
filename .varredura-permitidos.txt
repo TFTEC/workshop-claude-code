@@ -1,0 +1,5 @@
+# GUIDs fictícios que a varredura antes de publicar deve aceitar.
+# São só dos testes do modo anonimizado, que precisam de um GUID diferente do todo de zeros
+# para provar que GUIDs são mascarados. Conferidos em 09/10: não batem com nenhum ID real.
+9a8b7c6d-5e4f-4a3b-8c2d-1e0f9a8b7c6d
+f1e2d3c4-b5a6-4789-8abc-def012345678

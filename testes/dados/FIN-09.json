@@ -1,0 +1,33 @@
+{
+  "count": 2,
+  "data": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-loja-online/providers/Microsoft.Network/applicationGateways/appgw-ficticio-sem-listener",
+      "name": "appgw-ficticio-sem-listener",
+      "resourceGroup": "rg-ficticio-loja-online",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "brazilsouth",
+      "sku": "Standard_v2",
+      "camada": "Standard_v2",
+      "estado": "Running",
+      "listeners": 0,
+      "regras": 0,
+      "pools": 1
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-ficticio-laboratorio/providers/Microsoft.Network/applicationGateways/appgw-ficticio-sem-pool",
+      "name": "appgw-ficticio-sem-pool",
+      "resourceGroup": "rg-ficticio-laboratorio",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000",
+      "location": "eastus",
+      "sku": "WAF_v2",
+      "camada": "WAF_v2",
+      "estado": "Running",
+      "listeners": 1,
+      "regras": 1,
+      "pools": 0
+    }
+  ],
+  "skip_token": null,
+  "total_records": 2
+}
