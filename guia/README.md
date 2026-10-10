@@ -7,6 +7,8 @@ Este guia é o material de leitura do workshop de Claude Code da TFTEC Masters. 
 
 Cada parte explica um conceito em texto curto, mostra um exemplo com comandos, diz quando usar e aponta para a documentação oficial. Cada uma se lê em 5 a 10 minutos.
 
+Para seguir o dia na ordem, bloco a bloco e com os comandos de cada demo, use o [guia do workshop](../guia-do-workshop.md). Este guia explica os conceitos de cada bloco.
+
 ## Índice
 
 | Parte | Assunto | Prática |
