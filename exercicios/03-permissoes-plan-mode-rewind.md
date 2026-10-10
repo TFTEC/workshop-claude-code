@@ -2,7 +2,7 @@
 
 > **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
 
-**Horário:** 10h15 · **Tempo:** 25 minutos
+**Horário:** 10h11 · **Tempo:** 29 minutos
 
 **Objetivo:** controlar quanto o Claude faz sozinho, planejar antes de editar, aprovar ou recusar uma edição e desfazer o que ele mudou.
 
@@ -14,7 +14,7 @@ O **modo de permissão** decide o que o Claude pode fazer sem pedir a sua aprova
 
 | O que aparece na tela | Nome técnico | O que o Claude faz sem perguntar |
 |---|---|---|
-| `⏸ manual mode on` (em cinza) | `default` | Só lê. Pergunta antes de editar um arquivo ou rodar a maioria dos comandos. |
+| `⏸ manual mode on` (em cinza) | `default` (a linha de comando também aceita `manual`) | Só lê. Pergunta antes de editar um arquivo ou rodar a maioria dos comandos. |
 | `⏵⏵ accept edits on` | `acceptEdits` | Lê, edita arquivos da pasta e roda comandos simples de arquivo, como `mkdir`, `mv`, `cp` e até `rm`. Pergunta antes dos outros comandos. |
 | `⏸ plan mode on` | `plan` | Lê e pesquisa, mas não edita. Termina com um plano para você aprovar. |
 | `⏵⏵ auto mode on` | `auto` | Faz tudo sem perguntar. Um segundo modelo, o **classificador**, revisa as ações antes de rodar e bloqueia o que foge do seu pedido. |

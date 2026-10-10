@@ -20,7 +20,7 @@ claude
 
 ## Guia do aluno
 
-O material de leitura, com os conceitos de cada bloco explicados e exemplos prontos para copiar, está em [`guia/`](guia/README.md). Use durante o workshop e para consultar depois.
+O material de leitura, com os conceitos de cada bloco explicados e exemplos prontos para copiar, está em [`guia/`](guia/README.md). Use durante o workshop e para consultar depois. Para uma consulta rápida, o [glossário](guia/glossario.md) mostra onde cada arquivo do Claude Code fica, como editar, e os termos de A a Z com o link oficial.
 
 ## Deck
 

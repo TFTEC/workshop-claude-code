@@ -2,7 +2,7 @@
 
 > **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
 
-**Horário:** 11h40 · **Tempo:** 20 minutos
+**Horário:** 11h45 · **Tempo:** 15 minutos
 
 **Objetivo:** conectar um servidor MCP ao Claude Code, conferir o status e usar a documentação oficial da Microsoft nas respostas. O instrutor mostra o Azure MCP só para leitura numa demo; quem tem Node.js pode repetir como desafio extra.
 
@@ -96,7 +96,7 @@ Os comandos `claude mcp ...` rodam no **PowerShell**, fora do Claude. Deixe um t
   5. Se o Claude estiver aberto, saia com `/exit`. Abra de novo no modo que pergunta antes de agir:
 
      ```powershell
-     claude --permission-mode default
+     claude --permission-mode manual
      ```
 
      A linha embaixo do campo de digitar mostra `⏸ manual mode on`. Rode `/mcp` e confira o `azure-mcp` conectado.
@@ -120,7 +120,7 @@ Os comandos `claude mcp ...` rodam no **PowerShell**, fora do Claude. Deixe um t
 
   ```powershell
   $env:MCP_TIMEOUT = "120000"
-  claude --permission-mode default
+  claude --permission-mode manual
   ```
 
 - **O `azure-mcp` dá erro de autenticação:** rode `az login` de novo e confira a subscription com `az account show`.

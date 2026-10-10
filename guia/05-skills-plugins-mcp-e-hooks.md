@@ -1,10 +1,11 @@
-# 05. Skills, plugins, MCP e hooks
+# 05. Skills, subagentes, plugins, MCP e hooks
 
-Quatro jeitos de estender o Claude Code. Os três primeiros **dão** capacidades novas; o último **controla** o que ele faz.
+Cinco jeitos de estender o Claude Code. Os quatro primeiros **dão** capacidades novas; o último **controla** o que ele faz.
 
 | Peça | O que é | Em uma frase |
 |---|---|---|
 | Skill | Um `SKILL.md` com instruções | Ensina o Claude a fazer uma tarefa do seu jeito |
+| Subagente | Um `.md` em `.claude/agents/` | Um Claude auxiliar, com contexto próprio, que devolve só o resultado |
 | Plugin | Um pacote de skills, agentes, hooks e servidores MCP | Instala várias peças de uma vez |
 | MCP | Um servidor que dá ferramentas novas | Liga o Claude a um sistema de fora |
 | Hook | Um comando que o Claude Code roda num momento fixo | Barra, confere ou registra o que o Claude faz |
@@ -26,6 +27,44 @@ Não execute nenhum comando.
 
 O Claude Code troca `$ARGUMENTS` pelo texto que você digita depois do comando. As skills do projeto ficam em `.claude/skills/<nome>/SKILL.md`, e as suas, para todos os projetos, em `~/.claude/skills/`. Se a pasta for criada no meio da sessão, rode `/reload-skills`. `/skills` lista as skills, e a tecla `t` ordena por tokens.
 
+## Subagentes
+
+Um **subagente** é um Claude auxiliar que trabalha numa **janela de contexto própria**. O Claude principal entrega a tarefa; o subagente lê, procura e roda o que precisar na janela dele e devolve **só o resultado**. Os arquivos que ele leu não entram na sua conversa, que continua leve.
+
+| | Skill | Subagente |
+|---|---|---|
+| Onde roda | Na conversa atual | Num contexto separado |
+| O que volta para você | Todo o trabalho fica na conversa | Só o resumo final |
+| Bom para | Ensinar um jeito de fazer uma tarefa | Delegar uma tarefa que lê muito, ou que deve ter ferramentas limitadas |
+
+O Claude Code já traz **agentes embutidos**, que ele usa sozinho: o **Explore** procura no código sem alterar nada, o **Plan** pesquisa durante o plan mode e o **general-purpose** faz tarefas de várias etapas.
+
+**Criar o seu.** Um subagente é um arquivo markdown: um cabeçalho com o nome, a descrição, as ferramentas e o modelo, e depois as instruções. Você pode escrever à mão ou pedir ao Claude: `Crie um subagente em .claude/agents que revise scripts de infra, só com ferramentas de leitura`. O `/agents` mostra onde os arquivos ficam.
+
+```markdown
+---
+name: revisor-de-script
+description: Revisa scripts PowerShell e Bash de infra atrás de riscos. Use depois de criar ou alterar um script.
+tools: Read, Grep, Glob
+model: haiku
+---
+
+Você revisa scripts de infraestrutura. Não altere nenhum arquivo.
+Para cada script, aponte: comandos que apagam ou alteram recursos, segredos escritos no código e falta de tratamento de erro.
+Devolva uma tabela com arquivo, linha, risco e sugestão. Termine com um veredito: pode rodar, ajustar antes ou não rodar.
+```
+
+| Campo | Para quê |
+|---|---|
+| `name` | O nome do agente, único e sem `:`. Por convenção, minúsculas e hífen |
+| `description` | **Quando usar.** O Claude decide delegar lendo essa frase |
+| `tools` | As ferramentas que ele pode usar. Aqui, só leitura: ele não consegue editar nem rodar comandos |
+| `model` | O modelo dele. Um modelo menor, como o `haiku`, deixa uma revisão simples mais barata |
+
+Os agentes do projeto ficam em `.claude/agents/<nome>.md` e vão para o git; os seus, para todos os projetos, em `~/.claude/agents/`. Para usar, peça pelo nome: `Use o subagente revisor-de-script para revisar scripts/limpa-logs.ps1`. Para garantir que ele rode, mencione com `@agent-revisor-de-script`. Se a description for boa, o Claude também delega sozinho. Se a pasta `.claude/agents/` não existia quando a sessão começou, saia e abra de novo.
+
+> **Cuidado com o custo:** cada subagente lê e trabalha com tokens próprios, que contam no mesmo limite de uso. Delegar economiza o **seu** contexto, mas não o seu limite. E o rewind não desfaz o que um subagente editou: para isso, use o git.
+
 ## Plugins e marketplaces
 
 Um **plugin** instala de uma vez skills, agentes, hooks e servidores MCP. Ele vem de um **marketplace**. O oficial da Anthropic, `claude-plugins-official`, já vem configurado.
@@ -35,7 +74,7 @@ Um **plugin** instala de uma vez skills, agentes, hooks e servidores MCP. Ele ve
 /plugin install mattpocock-skills@claude-plugins-official
 ```
 
-O `/plugin install` não instala na hora: ele mostra os detalhes, inclusive o **Context cost**, ou seja, quanto o plugin soma a toda mensagem (**Every turn**) e quanto soma quando roda (**When invoked**). No terminal, fora do Claude, `claude plugin details mattpocock-skills` mostra o mesmo, componente por componente. **Todo plugin ligado custa tokens em toda mensagem, mesmo sem usar.** Olhe o custo antes de instalar.
+O `/plugin install` não instala na hora: ele mostra os detalhes, inclusive o **Context cost**, ou seja, quanto o plugin soma a toda mensagem (**Every turn**) e quanto soma quando roda (**When invoked**). No terminal, fora do Claude, `claude plugin details mattpocock-skills` mostra o **Projected token cost**, com o que fica sempre ligado (**Always-on**), e uma tabela por componente. **Todo plugin ligado custa tokens em toda mensagem, mesmo sem usar.** Olhe o custo antes de instalar.
 
 Skill de plugin se chama com o nome do plugin na frente: `/mattpocock-skills:grill-me`.
 
@@ -106,6 +145,8 @@ O freio é a **segunda proteção**. A primeira é a permissão: uma conta só c
 | Quero... | Use |
 |---|---|
 | Repetir um jeito de fazer uma tarefa | Uma skill |
+| Delegar uma tarefa que lê muito, sem encher a minha conversa | Um subagente |
+| Uma revisão que só pode ler, nunca alterar | Um subagente com `tools` só de leitura |
 | Ganhar um conjunto pronto de skills e ferramentas | Um plugin (olhe o custo antes) |
 | Que o Claude consulte um sistema de fora | Um servidor MCP |
 | **Garantir** que algo nunca aconteça | Um hook `PreToolUse` com exit 2 |
@@ -117,6 +158,7 @@ Lembre: instrução no `CLAUDE.md` é um **pedido**; hook é um **impedimento**.
 
 - Para praticar depois (opcional): as fichas [05](../exercicios/05-plugins-e-skills.md) e [06](../exercicios/06-mcps.md)
 - Skills: https://code.claude.com/docs/en/skills
+- Subagentes: https://code.claude.com/docs/en/sub-agents
 - Plugins: https://code.claude.com/docs/en/discover-plugins
 - MCP: https://code.claude.com/docs/en/mcp
 - Hooks: https://code.claude.com/docs/en/hooks e https://code.claude.com/docs/en/hooks-guide

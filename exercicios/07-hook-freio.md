@@ -20,7 +20,7 @@ O freio é a **segunda proteção**:
 1. **A primeira é a permissão.** A sua conta tem só o papel **Reader** na subscription. Mesmo que um comando de escrita escape, o Azure recusa.
 2. **A segunda é o freio.** O comando de escrita nem sai da sua máquina.
 
-O combinado de `.claude/rules/combinados.md` ("o Azure só é lido") é um **pedido** ao Claude, como você viu no exercício 4: ele costuma seguir, mas nada o obriga. O freio é um **impedimento**: quem roda o freio é o Claude Code, não o modelo, e o exit 2 barra a chamada em qualquer modo de permissão, até no auto mode.
+O combinado de `.claude/rules/combinados.md` ("o Azure só é lido") é um **pedido** ao Claude, como você viu no exercício 4: ele costuma seguir, mas nada o obriga. O freio é um **impedimento**: quem roda o freio é o Claude Code, não o modelo, e o exit 2 barra a chamada antes de qualquer regra ou pergunta de permissão. Num teste de 10/10, com a versão 2.1.296, o freio barrou um `az vm stop` no auto mode, tanto pelo terminal quanto pela ferramenta Monitor.
 
 Deixe um **segundo terminal PowerShell** aberto na pasta do repositório, como no exercício 5. Confira nele que o PowerShell 7 está instalado, porque o freio roda com o `pwsh`:
 

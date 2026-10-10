@@ -41,7 +41,7 @@ Documentação: https://code.claude.com/docs/en/desktop, https://code.claude.com
 
 ## Quem tem acesso
 
-O Claude Code exige um plano pago: **Pro, Max, Team ou Enterprise**, ou uma conta Console com créditos. **O plano Free não dá acesso.** Algumas features dependem do login no claude.ai, e não funcionam só com chave de API: o Remote Control e as sessões na nuvem, por exemplo.
+O Claude Code exige um plano pago: **Pro, Max, Team ou Enterprise**, ou uma conta Console (cobrança por uso da API). **O plano Free não dá acesso.** Algumas features dependem do login no claude.ai, e não funcionam só com chave de API: o Remote Control e as sessões na nuvem, por exemplo.
 
 ## Exemplo: instalar e conferir
 
@@ -59,7 +59,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 claude --version
 ```
 
-Se algo der errado, `claude doctor` mostra o diagnóstico. No Windows, instale o Git antes: ele traz o Git Bash, que o Claude Code usa para rodar comandos. O passo a passo completo, com Git, PowerShell 7, Azure CLI e o teste final, está no [checklist pré-workshop](../checklist-pre-workshop.md).
+Se algo der errado, `claude doctor` mostra o diagnóstico. No Windows, instale o Git antes: ele traz o Git Bash, que é onde roda o `!` e a ferramenta Bash. Para os comandos que o próprio Claude roda, o shell principal no Windows é a ferramenta PowerShell. O passo a passo completo, com Git, PowerShell 7, Azure CLI e o teste final, está no [checklist pré-workshop](../checklist-pre-workshop.md).
 
 Para começar, entre na pasta do projeto e rode `claude`. Na primeira vez, o navegador abre para o login, e o Claude Code pergunta se você confia na pasta.
 

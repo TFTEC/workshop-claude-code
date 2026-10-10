@@ -1,0 +1,28 @@
+<section id="subagentes" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Subagentes</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">Um Claude auxiliar, com janela própria</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:stretch">
+<div style="width:820px;display:flex;flex-direction:column;gap:16px;background:#16202E;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#F2945A">.claude/agents/revisor-de-script.md</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;line-height:1.5;color:#C9D3DF">---<br>name: revisor-de-script<br>description: Revisa scripts de<br>&nbsp;&nbsp;infra atrás de riscos. Use depois<br>&nbsp;&nbsp;de criar ou alterar um script.<br>tools: Read, Grep, Glob<br>model: haiku<br>---<br>Não altere nada. Devolva uma tabela:<br>arquivo, linha, risco e sugestão.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">Janela própria</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">Ele lê e trabalha à parte. Para você, volta só o resultado.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">Skill × subagente</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">A skill roda na sua conversa. O subagente roda numa janela separada.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">Como chamar</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">Peça pelo nome, mencione com @agent-nome, ou deixe o Claude delegar pela description.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/05-skills-plugins-mcp-e-hooks.md · Embutidos: Explore, Plan e general-purpose · Economiza contexto, não o limite de uso.</p>
+<aside>Demo: grave o revisor-de-script.md no .claude/agents pelo segundo terminal e abra no VS Code. Explique o cabeçalho: description diz quando usar, tools só de leitura (ele não edita nem roda comando), model haiku deixa barato. Pasta nova: /exit e claude. O /agents hoje só lembra onde os arquivos ficam; não lista. Peça "Use o subagente revisor-de-script para revisar uso-de-disco.ps1" e mostre que só a tabela volta para a conversa.</aside>
+</section>
