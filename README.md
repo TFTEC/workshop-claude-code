@@ -12,6 +12,8 @@ cd workshop-claude-code
 claude
 ```
 
+> **Guia do workshop:** o dia inteiro, bloco a bloco, com os comandos de cada demo para você repetir depois, está no [guia-do-workshop.md](guia-do-workshop.md).
+
 ## Ordem do dia
 
 1. **Antes de sábado: checklist pré-workshop.** Siga o [checklist-pre-workshop.md](checklist-pre-workshop.md) até sexta, 09/10, às 22h.
