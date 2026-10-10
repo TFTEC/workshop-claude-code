@@ -112,11 +112,11 @@ Depois do 01, os tickets **02 a 05 não dependem um do outro**: é aí que entra
 
    Antes de editar, cada sessão em segundo plano entra sozinha numa worktree própria, em `.claude/worktrees/`. As duas leem o mesmo repositório, mas cada uma escreve na sua cópia, sem pisar uma na outra.
 
-   > **"Não faça push"** é de propósito: uma sessão em segundo plano costuma fazer push quando o repositório tem remoto, e você não tem permissão de escrita no repositório do workshop. Os commits ficam só na sua máquina.
+   > **"Não faça push"** é de propósito: sem esse pedido, uma sessão em segundo plano pode tentar um push quando o repositório tem remoto, e você não tem permissão de escrita no repositório do workshop. Os commits ficam só na sua máquina.
 
    Também dá para começar uma sessão em segundo plano direto do terminal, com um nome: `claude --bg --name fin-02 "Implemente o ticket .scratch/relatorio-finops/issues/02-regras-fin-02-a-04.md com TDD, faça commit na branch da sua worktree e não faça push."`.
 
-5. **Acompanhe no agent view.** As sessões aparecem agrupadas pelo estado: `Working`, `Needs input` e `Completed`.
+5. **Acompanhe no agent view.** As sessões aparecem agrupadas pelo estado: `Pinned`, `Ready for review`, `Needs input`, `Working` e `Completed`.
    - **↑ e ↓** andam pelas linhas.
    - **Espaço** abre a espiada, com a última saída ou a pergunta da sessão. Digite a resposta e aperte **Enter** para responder sem sair do painel.
    - **Enter** ou **→** entra na conversa inteira. **←**, com o campo vazio, volta para a tabela.
@@ -192,7 +192,7 @@ Depois do 01, os tickets **02 a 05 não dependem um do outro**: é aí que entra
 **Desafio extra** (para quem terminou antes)
 
 - **Subagentes em worktrees, numa sessão só.** Em vez de abrir uma sessão por ticket, peça numa sessão só: `Implemente os tickets 06 e 07 em sequência, cada um com um subagente na sua própria worktree, com TDD e commit, sem push.` O Claude divide o trabalho entre subagentes, e cada um edita a sua cópia.
-- **Limpe as worktrees que já entraram na `main`.** Peça ao Claude a lista com `git worktree list` e remova as que já foram juntadas, uma por uma, com `git worktree remove .claude/worktrees/<nome>`. No agent view, apagar uma sessão também apaga a worktree dela, **inclusive o que não estiver em commit**.
+- **Limpe as worktrees que já entraram na `main`.** Peça ao Claude a lista com `git worktree list` e remova as que já foram juntadas, uma por uma, com `git worktree remove .claude/worktrees/<nome>`. No agent view, apagar uma sessão também apaga a worktree dela, **inclusive o que não estiver em commit**. Se a worktree tiver commits que não foram enviados (o caso desta ficha, sem push), a remoção é recusada e a worktree fica: aí use `git worktree remove`, com `--force` se houver mudanças sem commit.
 - **Compare com o gabarito.** Peça: `Compare o meu relatorio/ com o da branch origin/gabarito e liste as diferenças de comportamento, não de estilo.`
 
 **Travou?**

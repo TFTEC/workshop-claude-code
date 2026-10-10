@@ -2,11 +2,11 @@
 
 > **Prática opcional, para depois do workshop:** na manhã do workshop o instrutor demonstra estas funcionalidades ao vivo; use esta ficha para repetir no seu ritmo.
 
-**Horário:** 9h50 · **Tempo:** 25 minutos
+**Horário:** 9h50 · **Tempo:** 21 minutos
 
 **Objetivo:** rodar a mesma tarefa pequena com modelos e níveis de effort diferentes e ver, nos números, o que gasta tokens.
 
-**Feature:** `/model`, `/effort`, `/context`, `/usage` (o mesmo que `/cost`) e `/compact`. O `/fast` aparece só na demo do instrutor.
+**Feature:** `/model`, `/effort`, `/context`, `/usage` (o mesmo que `/cost`) e `/compact`. O `/fast` não tem demo: o instrutor só comenta.
 
 ## Antes de começar: custo
 
@@ -136,7 +136,7 @@ A rodada 2 troca só o modelo. A rodada 3 troca só o effort. Mudando uma coisa 
    /model default
    ```
 
-   O `/effort auto` limpa o effort salvo para o modelo ativo. O `/model default` volta ao modelo padrão da sua conta. Confira no `/status` ou no topo da tela.
+   O `/effort auto` limpa o effort salvo para o modelo ativo. O `/model default` volta ao modelo padrão da sua conta. Confira o modelo no `/status` ou no topo da tela, e o effort no `/effort status`.
 
    O effort fica salvo por modelo. O `haiku` continua com o `low` da rodada 1. Se um dia você voltar a usar o `haiku`, rode `/effort auto` com ele ativo.
 
@@ -151,12 +151,12 @@ A rodada 2 troca só o modelo. A rodada 3 troca só o effort. Mudando uma coisa 
 **Travou?**
 
 - **`/model haiku` não aceitou:** a sua organização pode ter restringido os modelos. Use `/model sonnet` no lugar do `haiku`.
-- **Não sabe em que modelo ou effort está:** rode `/status`, ou olhe o topo da tela.
+- **Não sabe em que modelo ou effort está:** `/status` mostra o modelo, `/effort status` mostra o effort, e o topo da tela mostra os dois.
 - **Esqueceu de voltar ao padrão:** rode `/effort auto` e `/model default` a qualquer momento, até no fim do dia.
 - **Bateu o limite de uso:** pare, acompanhe pela tela do instrutor e copie os números dele para a sua tabela. Se o limite renovar a tempo, siga normalmente.
 - **Ficou sem tempo:** faça só as rodadas 1 e 3 e o passo 8.
 
-## `/fast`: só na demo do instrutor
+## `/fast`: só comentado, sem demo
 
 O fast mode deixa o Opus até 2,5 vezes mais rápido, com a mesma qualidade, mas cobra mais por token. Nos planos de assinatura, ele **só funciona com créditos extras** e gasta deles **mesmo que ainda sobre limite no seu plano**. Por isso, no workshop, só o instrutor mostra.
 

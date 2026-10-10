@@ -45,9 +45,26 @@ paths:
 
 Essa regra só entra no contexto quando o Claude lê ou edita um arquivo `.tf` da pasta `terraform/`. Numa conversa sobre os scripts de backup, ela não gasta nada.
 
+## Criar e editar os arquivos
+
+São arquivos de texto comuns. Três jeitos de mexer neles:
+
+- **`/init` cria o primeiro `CLAUDE.md`.** O Claude lê o projeto e escreve um rascunho com a estrutura, os comandos de build e de teste e as convenções que encontrou. Revise antes de commitar: corte o que o código já diz e acrescente o que só você sabe.
+- **`/memory` abre os arquivos.** Ele lista os `CLAUDE.md` e `CLAUDE.local.md` do usuário e do projeto, e abre no editor o que você escolher. Para ver o que esta sessão de fato carregou, use o `/context`.
+- **Abra direto no editor**, como qualquer arquivo:
+
+```powershell
+code CLAUDE.md                         # o da equipe, na raiz do projeto
+code CLAUDE.local.md                   # o seu, neste projeto
+code $HOME\.claude\CLAUDE.md           # o seu, em todos os projetos
+code .claude\rules\                    # as regras da equipe
+```
+
+Os arquivos carregam no começo da sessão. Depois de editar, saia com `/exit` e abra de novo com `claude`, e confira no `/context` o que entrou. O mapa completo de onde cada arquivo do Claude Code fica está no [glossário](glossario.md#onde-cada-coisa-fica).
+
 ## E o AGENTS.md?
 
-`AGENTS.md` é o padrão aberto lido por vários agentes de código. O Claude Code lê o `AGENTS.md` nativamente, mas, no padrão (`claude-md-or-agents-md`), **só quando a pasta não tem `CLAUDE.md`, `.claude/CLAUDE.md` nem `CLAUDE.local.md`**. Para usar um arquivo só para todos os agentes, há dois caminhos:
+`AGENTS.md` é o padrão aberto lido por vários agentes de código. O Claude Code lê o `AGENTS.md` nativamente, mas, no padrão (`claude-md-or-agents-md`), **só quando a pasta, e as pastas acima dela, não têm `CLAUDE.md`, `.claude/CLAUDE.md` nem `CLAUDE.local.md`**. Para usar um arquivo só para todos os agentes, há dois caminhos:
 
 - pôr `@AGENTS.md` numa linha do `CLAUDE.md` (um **import**). No Windows, prefira isso a um link simbólico;
 - mudar a opção **Project instructions** do `/config` para `claude-md-and-agents-md`. Atenção: o `/config` grava isso nas suas configurações de usuário, e a mudança vale para **todos** os seus projetos.
@@ -58,7 +75,7 @@ Comentários HTML de bloco (`<!-- ... -->`) num `CLAUDE.md` são removidos antes
 
 ## Memória automática
 
-Além do que você escreve, o Claude pode anotar sozinho o que aprende, como as suas preferências e as correções que você fez: é a **memória automática**. As primeiras 200 linhas (ou 25 KB) do índice dela entram em toda sessão. O `/memory` mostra os arquivos de memória, liga e desliga a memória automática e abre a pasta das notas.
+Além do que você escreve, o Claude pode anotar sozinho o que aprende, como as suas preferências e as correções que você fez: é a **memória automática**. As notas ficam fora do projeto, em `~/.claude/projects/<projeto>/memory/`, com um índice no `MEMORY.md`. As primeiras 200 linhas (ou 25 KB) desse índice entram em toda sessão. O `/memory` mostra os arquivos de memória, liga e desliga a memória automática e abre a pasta das notas. São markdown comum: dá para ler, corrigir e apagar.
 
 ## Exemplo: conferir e personalizar
 

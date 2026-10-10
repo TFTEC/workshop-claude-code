@@ -8,7 +8,7 @@
 
 ## 1. Plano do Claude
 
-O Claude Code exige um plano pago: **Pro, Max, Team ou Enterprise**, ou uma conta Console com créditos. **O plano Free não dá acesso.** Sem plano pago, você acompanha as demos, mas não consegue fazer os exercícios.
+O Claude Code exige um plano pago: **Pro, Max, Team ou Enterprise**, ou uma conta Console (cobrança por uso da API). **O plano Free não dá acesso.** Sem plano pago, você acompanha as demos, mas não consegue fazer os exercícios.
 
 ## 2. Ferramentas
 
@@ -32,7 +32,7 @@ Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck -MinimumVers
 
 O segundo comando precisa mostrar uma versão 5.x. O `-MaximumVersion` evita que venha o Pester 6. No Windows, o Pester 3 que já vem instalado com o sistema não serve.
 
-- **Windows:** instale o Git antes do Claude Code. Ele traz o Git Bash, que o Claude Code usa para rodar comandos.
+- **Windows:** instale o Git antes do Claude Code. Ele traz o Git Bash, que é onde roda o `!` e a ferramenta Bash. Os comandos que o próprio Claude roda vão, no Windows, pela ferramenta PowerShell.
 - **macOS:** se preferir não usar o Homebrew para o PowerShell, a Microsoft tem um instalador `.pkg` em https://aka.ms/powershell-release?tag=stable.
 
 ## 3. Claude Code

@@ -1,0 +1,29 @@
+<section id="regras-permissao" data-transition="fade" style="background:#F7F5EF;color:#3F4A59;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B4501F">Regras de permissão</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;color:#16202E">O que sempre pode, o que pergunta e o que nunca</h2>
+</div>
+<div style="display:flex;gap:48px;align-items:stretch">
+<div style="width:820px;display:flex;flex-direction:column;gap:16px;background:#16202E;border-radius:16px;padding:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#F2945A">.claude/settings.local.json</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;line-height:1.5;color:#C9D3DF">{<br>&nbsp;&nbsp;"permissions": {<br>&nbsp;&nbsp;&nbsp;&nbsp;"allow": ["PowerShell(az account show)"],<br>&nbsp;&nbsp;&nbsp;&nbsp;"ask": ["PowerShell(git push *)"],<br>&nbsp;&nbsp;&nbsp;&nbsp;"deny": ["Read(./.env)"]<br>&nbsp;&nbsp;}<br>}</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#F1E2D6;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">deny: nunca</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">É conferida primeiro e vale em qualquer modo, até no auto.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">ask: pergunta antes</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">Para o que pode, mas merece um olhar seu.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;border:1px solid #E2DDD0;border-radius:16px;padding:28px 32px">
+<h3 style="font-size:32px;font-weight:600;color:#16202E">allow: sem perguntar</h3>
+<p style="font-size:26px;line-height:1.4;color:#3F4A59">Para o que é seguro e repetido.</p>
+</div>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#16202E"><b>Onde mora decide para quem vale:</b> <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">~/.claude</span> você · <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">.claude/settings.json</span> a equipe · <span style="font-family:'JetBrains Mono', 'Courier New', monospace;color:#B4501F">settings.local.json</span> só você, aqui · gerenciada: a TI, e vence todas.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">Leia mais: guia/03-permissoes-plan-mode-e-rewind.md · No Windows, use PowerShell(...), não Bash(...).</p>
+<aside>Demo: no segundo terminal, grave o deny de Read(./.env) no .claude/settings.local.json. No Claude, /permissions e mostre a regra em Deny, com a origem. Peça para ler o .env com a ferramenta de leitura: ele é barrado. Peça "Rode no terminal: Get-Content .env": também é barrado. Crie o leitor.ps1, que lê o .env por dentro, e peça para rodar: passa. Feche com "regra não é muro": ela vê a chamada, não o que o script faz por dentro. Para o que nunca pode acontecer, são três proteções: permissão mínima, regra e hook. Limpe apagando o settings.local.json e o leitor.ps1.</aside>
+</section>
